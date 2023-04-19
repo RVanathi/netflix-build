@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 
 const initialState = {
   user: null,
@@ -8,7 +7,7 @@ const initialState = {
 export const userSlice = createSlice({
   name: "user",
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
+  // The `reducers` field lets us define reducers and generate associated actions that will be dispatched
   reducers: {
     login: (state, action) => {
       state.user = action.payload;
@@ -20,7 +19,7 @@ export const userSlice = createSlice({
 });
 
 export const { login, logout } = userSlice.actions;
-
+//used to get values out of the global store(userslice)
 export const selectUser = (state) => state.user.user;
 
 export default userSlice.reducer;

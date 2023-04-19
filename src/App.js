@@ -6,6 +6,7 @@ import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
+import Profile from "./screens/Profile";
 
 function App() {
   const user = useSelector(selectUser);
@@ -21,10 +22,10 @@ function App() {
           })
         );
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
-    return unsubscribe;
+    return unsubscribe; //detach old listener and attach new one(performance won't be affected)
   }, [dispatch]);
   return (
     <div className="app">

@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
+//like a key to log into firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCaBWj_PCl7NlnqJ4Qij5IZ9v5ULh6xcQw",
   authDomain: "vr-netflix-build.firebaseapp.com",
@@ -12,7 +13,7 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
+const db = firebaseApp.firestore(); //realtime database
 const auth = firebase.auth();
 
 export { auth };

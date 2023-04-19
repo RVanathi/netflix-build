@@ -43,7 +43,7 @@ const SignUp = () => {
           Sign In
         </button>
         <h4>
-          <span className="sign-up-gray">New to Netflix?</span>
+          <span className="sign-up-gray">New to Netflix? </span>
           <span className="sign-up-link" onClick={register}>
             Sign up now.
           </span>
