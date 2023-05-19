@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { auth } from "../firebase";
+import db, { auth } from "../firebase";
 import "../screens/signUp.css";
 
 const SignUp = () => {
@@ -14,7 +14,14 @@ const SignUp = () => {
         passwordRef.current.value
       )
       .then((authUser) => {
-        console.log(authUser);
+        console.log("Authenticated user:", authUser);
+        console.log(authUser.user.uid);
+        db.collection("customers")
+          .doc(authUser.user.uid)
+          .set({ savedShows: [] })
+          .then((saved) => {
+            console.log(typeof saved);
+          });
       })
       .catch((error) => {
         alert(error.message);
@@ -29,7 +36,7 @@ const SignUp = () => {
         passwordRef.current.value
       )
       .then((authUser) => {
-        console.log(authUser);
+        // console.log(authUser);
       })
       .catch((error) => alert(error.message));
   };

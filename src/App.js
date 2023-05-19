@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth } from "./firebase";
 import "./App.css";
 import { login, logout, selectUser } from "./features/userSlice";
-import { auth } from "./firebase";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Profile from "./screens/Profile";
+import Mylist from "./screens/Mylist";
 
 function App() {
   const user = useSelector(selectUser);
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/mylist" element={<Mylist />} />
           </Routes>
         )}
       </Router>

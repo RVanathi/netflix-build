@@ -20,12 +20,20 @@ const Nav = () => {
   return (
     <div className={`nav ${show && "nav-black"}`}>
       <div className="nav-contents">
-        <img
-          onClick={() => navigate("/")}
-          className="nav-logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-          alt=""
-        />
+        <div className="nav-left">
+          <img
+            onClick={() => navigate("/")}
+            className="nav-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+            alt=""
+          />
+          <div className="list" onClick={() => navigate("/")}>
+            Home
+          </div>
+          <div onClick={() => navigate("/mylist")} className="list">
+            My List
+          </div>
+        </div>
         <img
           onClick={() => navigate("/profile")}
           className="nav-avatar"

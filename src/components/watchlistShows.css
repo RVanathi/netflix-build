@@ -1,0 +1,130 @@
+.watch-title {
+    color: white;
+    margin-left: 20px;
+}
+
+.watch {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.watch-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.watch-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.watch-posters {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+    transition: transform 450ms;
+}
+
+.watch-poster {
+    display: flex;
+    cursor: pointer;
+    max-height: 100px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+}
+
+.show-title {
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.close-icon {
+    position: absolute;
+    top: 1.5rem;
+    color: #D1D5DB;
+    right: 1.5rem;
+    font-size: x-large;
+}
+
+.scroll-icon {
+    color: white;
+    border-radius: 9999px;
+    opacity: .5;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0
+}
+
+.watch:hover .scroll-icon {
+    display: block;
+}
+
+.watch-posters:hover {
+    transform: scale(1.08);
+}
+
+.watch-poster-large:hover {
+    transform: scale(1.09);
+}
+
+.overlay:hover {
+    background-color: black;
+    opacity: .8;
+}
+
+.scroll-icon:hover {
+    opacity: 1;
+}
+
+@media (min-width: 640px) {
+    .watch-posters {
+        width: 160px;
+    }
+
+    .show-title {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 768px) {
+    .watch-posters {
+        width: 200px;
+    }
+
+    .show-title {
+        font-size: small;
+    }
+}
+
+@media (min-width: 1024px) {
+    .watch-posters {
+        width: 240px;
+    }
+}

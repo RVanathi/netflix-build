@@ -46,8 +46,8 @@ const Plans = () => {
         setProducts(products);
       });
   }, []);
-  console.log(products);
-  console.log(subscription);
+  // console.log(products);
+  // console.log(subscription);
 
   const loadCheckout = async (priceId) => {
     //setup stripe session for checkout
