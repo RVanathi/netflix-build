@@ -27,15 +27,21 @@ const Home = () => {
       <Row rowID="6" title="Animation" fetchUrl={requests.fetchAnimeShows} />
       <Row
         rowID="7"
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        rowID="8"
         title="Horror Movies"
         fetchUrl={requests.fetchHorrorMovies}
       />
       <Row
-        rowID="8"
-        title="Action Movies"
-        fetchUrl={requests.fetchActionMovies}
+        rowID="9"
+        title="Romance Movies"
+        fetchUrl={requests.fetchRomanceMovies}
       />
-      <Row rowID="9" title="Up Coming" fetchUrl={requests.fetchUpcoming} />
+
+      <Row rowID="10" title="Up Coming" fetchUrl={requests.fetchUpcoming} />
     </div>
   );
 };

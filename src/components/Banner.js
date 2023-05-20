@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ImInfo, ImPlay3 } from "react-icons/im";
 import "./banner.css";
 import axios from "../axios";
 import requests from "../requests";
@@ -37,8 +38,14 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner-buttons">
-          <button className="banner-btn">Play</button>
-          <button className="banner-btn">More Info</button>
+          <button className="banner-btn">
+            <ImPlay3 className="banner-icon" />
+            Play
+          </button>
+          <button className="banner-btn">
+            <ImInfo className="banner-icon" />
+            More Info
+          </button>
         </div>
         <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
       </div>

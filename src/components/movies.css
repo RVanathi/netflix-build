@@ -42,8 +42,16 @@
     position: absolute;
     top: 1.5rem;
     color: #D1D5DB;
-    left: 1.5rem;
+    /* left: 1.5rem; */
     font-size: x-large;
+}
+
+.l {
+    left: 1.5rem;
+}
+
+.r {
+    right: 1.5rem;
 }
 
 .row-posters:hover {
