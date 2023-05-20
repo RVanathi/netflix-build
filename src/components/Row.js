@@ -8,6 +8,7 @@ import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 import "./row.css";
 import Movies from "./Movies";
+// import { API_KEY } from "../requests";
 
 const Row = ({ title, fetchUrl, isLargeRow = false, rowID }) => {
   const [movies, setMovies] = useState([]);
@@ -17,7 +18,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false, rowID }) => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
-      console.log(request.data.results);
+      // console.log(request.data.results);
       return request;
     }
     fetchData();
@@ -53,6 +54,17 @@ const Row = ({ title, fetchUrl, isLargeRow = false, rowID }) => {
         .catch((error) => console.log(error));
     }
   };
+
+  // const handleClick = (movie) => {
+  //   async function fetchMovie(id) {
+  //     const request = await axios.get(
+  //       `/movie/${id}?api_key=${API_KEY}&append_to_response=videos`
+  //     );
+  //     console.log("the data: ", request.data);
+  //     return request;
+  //   }
+  //   fetchMovie(movie.id);
+  // };
 
   return (
     <>

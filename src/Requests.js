@@ -1,4 +1,4 @@
-const API_KEY = "7100ba823eb98a48d0dae2514d0fdfa8";
+export const API_KEY = "7100ba823eb98a48d0dae2514d0fdfa8";
 
 const requests = {
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
@@ -12,5 +12,6 @@ const requests = {
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749&language=en-US`,
   // fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
   fetchUpcoming: `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`,
+  // fetchSingleMovie: `/movie/`,
 };
 export default requests;
