@@ -1,3 +1,11 @@
+html,
 .app {
     background-color: #111;
+}
+
+.footer {
+    color: white;
+    font-size: small;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }

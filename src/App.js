@@ -34,11 +34,16 @@ function App() {
         {!user ? (
           <Login />
         ) : (
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/profile" element={<Profile />} />
-            <Route exact path="/mylist" element={<Mylist />} />
-          </Routes>
+          <>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/profile" element={<Profile />} />
+              <Route exact path="/mylist" element={<Mylist />} />
+            </Routes>
+            <footer className="footer">
+              Copyright ©2023 Vanathi Rajasekar
+            </footer>
+          </>
         )}
       </Router>
     </div>
